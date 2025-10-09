@@ -28,7 +28,6 @@ export default function Productos() {
         <div key={prod.id} className="col-md-4 mb-3">
           <div className="card h-100">
             <img src={prod.img} alt={prod.nombre} className="card-img-top" />
-            console.log(prod.img)
             <div className="card-body">
               <h5 className="card-title">{prod.nombre}</h5>
               <p className="card-text">${prod.precio}</p>
