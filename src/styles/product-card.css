@@ -1,0 +1,10 @@
+.product-image {
+  
+  width: 100%; /* Ajustá según tu diseño */
+  height: 280px; /* Ajustá según tu diseño */
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 5px;
+  border-radius: 8px;
+ 
+}

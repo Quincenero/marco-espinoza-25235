@@ -1,0 +1,163 @@
+[
+    {
+        "id":1,
+        "nombre":"Batatas",
+        "categoria":"Verduras",
+        "img": "batata.jpg",
+        "precio": 1000
+    },
+    {
+        "id":2,
+        "nombre":"Papas",
+        "categoria":"Verduras",
+        "img": "Papa-blanca.jpg",
+        "precio": 1000
+    },
+    {
+        "id":3,
+        "nombre":"Manzanas",
+        "categoria":"Frutas",
+        "img": "manzana-verde.jpg",
+        "precio": 2000
+    },
+    {
+        "id":4,
+        "nombre":"Apio",
+        "categoria":"Verduras",
+        "img": "apio.jpg",
+        "precio": 1000
+    },
+    {
+        "id":5,
+        "nombre":"Naranjas",
+        "categoria":"Frutas",
+        "img": "Naranja-ombligo.jpg",
+        "precio": 1000
+    },
+    {
+        "id":6,
+        "nombre":"Acelgas",
+        "categoria":"Verduras",
+        "img": "Acelga.jpg",
+        "precio": 1000
+    },
+    {
+        "id":7,
+        "nombre":"Aceite de coco",
+        "categoria":"Condimentos",
+        "img": "aceite-coco.jpg",
+        "precio": 1000
+    },
+    {
+        "id":8,
+        "nombre":"Aceite Virgen Extra",
+        "categoria":"Condimentos",
+        "img": "aceite-virgen-extra.png",
+        "precio": 1000
+    },
+    {
+        "id":9,
+        "nombre":"Aceto Balsamico",
+        "categoria":"Condimentos",
+        "img": "Aceto-Balsamico.png",
+        "precio": 1000
+    },
+    {
+        "id":10,
+        "nombre":"Albahaca",
+        "categoria":"Verduras",
+        "img": "albahaca.jpg",
+        "precio": 1000
+    },
+    {
+        "id":11,
+        "nombre":"Arandanos",
+        "categoria":"Frutas",
+        "img": "arandanos.png",
+        "precio": 1000
+    },
+    {
+        "id":12,
+        "nombre":"Banana",
+        "categoria":"Frutas",
+        "img": "Banana.jpg",
+        "precio": 1000
+    },
+    {
+        "id":13,
+        "nombre":"Brocoli",
+        "categoria":"Verduras",
+        "img": "brocoli.jpg",
+        "precio": 1000
+    },
+    {
+        "id":14,
+        "nombre":"Choclo",
+        "categoria":"Verduras",
+        "img": "Choclo.jpg",
+        "precio": 1000
+    },
+    {
+        "id":15,
+        "nombre":"Ciruela",
+        "categoria":"Frutas",
+        "img": "Ciruela.jfif",
+        "precio": 1000
+    },
+    {
+        "id":16,
+        "nombre":"Lechuga morada",
+        "categoria":"Verduras",
+        "img": "lechuga-morada.jpg",
+        "precio": 1000
+    },
+    {
+        "id":17,
+        "nombre":"Limon",
+        "categoria":"Frutas",
+        "img": "limon.jpg",
+        "precio": 1000
+    },
+    {
+        "id":18,
+        "nombre":"Cebolla morada",
+        "categoria":"Verduras",
+        "img": "Cebolla-morada.jfif",
+        "precio": 1000
+    },
+    {
+        "id":19,
+        "nombre":"Kiwi",
+        "categoria":"Frutas",
+        "img": "Kiwi.jpg",
+        "precio": 1000
+    },
+    {
+        "id":20,
+        "nombre":"Paltas",
+        "categoria":"Frutas",
+        "img": "palta.jpg",
+        "precio": 1000
+    },
+    {
+        "id":21,
+        "nombre":"Carbon vegetal",
+        "categoria":"Condimentos",
+        "img": "carbon.png",
+        "precio": 1000
+    },
+    {
+        "id":22,
+        "nombre":"Maderitas",
+        "categoria":"Condimentos",
+        "img": "maderitas.png",
+        "precio": 1000
+    },
+    {
+        "id":23,
+        "nombre":"Mix de Pimientas",
+        "categoria":"Condimentos",
+        "img": "mix-de-pimientas.png",
+        "precio": 1000
+    }
+]

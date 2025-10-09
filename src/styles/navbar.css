@@ -1,0 +1,10 @@
+.verduleria-logo {
+  height: 60px;
+  width: 70px;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.verduleria-logo:hover {
+  transform: scale(1.05);
+}
