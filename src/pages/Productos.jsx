@@ -1,54 +1,38 @@
-import { useContext, useState } from 'react';
-import { Container, Row, Col, Form } from 'react-bootstrap';
-import productosData from '../data/productos.json';
-import ProductCard from '../components/ProductCard';
-import { CarritoContext } from '../context/CarritoContext';
+import { useEffect, useState } from "react";
 
-const Productos = () => {
-  const { agregarAlCarrito } = useContext(CarritoContext);
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
-  const [productos, setProductos] = useState(productosData);
+export default function Productos() {
+  const [productos, setProductos] = useState([]);
 
-  const categoriasUnicas = ['Todas', ...new Set(productosData.map(p => p.categoria))];
+  useEffect(() => {
+    const obtenerProductos = async () => {
+      const url = "https://raw.githubusercontent.com/Quincenero/25235-marco-espinoza/main/src/data/productos.json";
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Error al obtener productos");
+        const data = await response.json();
+        setProductos(data);
+      } catch (error) {
+        console.error("Error al cargar productos:", error);
+        setProductos([]);
+      }
+    };
 
-  const productosFiltrados =
-    categoriaSeleccionada === 'Todas'
-      ? productos
-      : productos.filter(p => p.categoria === categoriaSeleccionada);
-
-  const eliminarProducto = (id) => {
-    setProductos((prev) => prev.filter((p) => p.id !== id));
-  };
+    obtenerProductos();
+  }, []);
 
   return (
-    <Container className="mt-4">
-      <h2 className="text-center mb-4">Productos Orgánicos</h2>
-
-      <Form.Select
-        className="mb-4"
-        value={categoriaSeleccionada}
-        onChange={(e) => setCategoriaSeleccionada(e.target.value)}
-      >
-        {categoriasUnicas.map((cat, idx) => (
-          <option key={idx} value={cat}>
-            {cat}
-          </option>
-        ))}
-      </Form.Select>
-
-      <Row>
-        {productosFiltrados.map((producto) => (
-          <Col key={producto.id} md={4} sm={6} xs={12}>
-            <ProductCard
-              producto={producto}
-              agregarAlCarrito={agregarAlCarrito}
-              eliminarProducto={eliminarProducto}
-            />
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <div className="row">
+      {productos.map((prod) => (
+        <div key={prod.id} className="col-md-4 mb-3">
+          <div className="card h-100">
+            <img src={prod.imagen} alt={prod.nombre} className="card-img-top" />
+            <div className="card-body">
+              <h5 className="card-title">{prod.nombre}</h5>
+              <p className="card-text">${prod.valor}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   );
-};
-
-export default Productos;
+}

@@ -2,8 +2,10 @@ import { Card, Button } from 'react-bootstrap';
 import '../styles/product-card.css';
 
 const ProductCard = ({ producto, agregarAlCarrito }) => {
-  const imagenSrc = new URL(`../assets/productos/${producto.img}`, import.meta.url).href;
-
+const imagenSrc = producto.img.startsWith("http")
+  ? producto.img
+  : `/img/${producto.img}`;
+  console.log("Producto recibido:", producto);
   return (
     <Card className="mb-4 shadow-sm">
       <Card.Img 
