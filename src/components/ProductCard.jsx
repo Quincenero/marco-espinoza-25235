@@ -2,12 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 const ProductCard = ({ producto, agregarAlCarrito }) => {
-  console.log("ProductCard montado");
-  console.log("Producto recibido:", producto);
-  console.log("Función agregarAlCarrito:", agregarAlCarrito);
-
   
-
   const imagenSrc = producto.img.startsWith('http')
     ? producto.img
     : `/img/${producto.img}`;
