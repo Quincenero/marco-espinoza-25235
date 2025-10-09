@@ -10,28 +10,28 @@
         "id":2,
         "nombre":"Papas",
         "categoria":"verduras",
-        "img": "./image/Papa-blanca.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Papa-blanca.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":3,
         "nombre":"Manzanas",
         "categoria":"frutas",
-        "img": "./image/manzana-verde.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/manzana-verde.jpg?raw=true",
         "precio": 2000
     },
     {
         "id":4,
         "nombre":"Apio",
         "categoria":"verduras",
-        "img": "./image/apio.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/apio.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":5,
         "nombre":"Naranjas",
         "categoria":"frutas",
-        "img": "../image/Naranja-ombligo.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Naranja-ombligo.jpg?raw=true",
         "precio": 1000
     },
     {
@@ -45,119 +45,119 @@
         "id":7,
         "nombre":"Aceite de coco",
         "categoria":"almacen",
-        "img": "./image/aceite-coco.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/aceite-coco.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":8,
         "nombre":"Aceite Virgen Extra",
         "categoria":"almacen",
-        "img": "./image/Aceite-Virgen-Extra.png",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/aceite-virgen-extra.png?raw=true",
         "precio": 1000
     },
     {
         "id":9,
         "nombre":"Aceto Balsamico",
         "categoria":"almacen",
-        "img": "./image/Aceto-Balsamico.png",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Aceto-Balsamico.png?raw=true",
         "precio": 1000
     },
     {
         "id":10,
         "nombre":"Albahaca",
         "categoria":"verduras",
-        "img": "./image/albahaca.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/albahaca.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":11,
         "nombre":"Arandanos",
         "categoria":"frutas",
-        "img": "./image/arandanos.png",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/arandanos.png?raw=true",
         "precio": 1000
     },
     {
         "id":12,
         "nombre":"Banana",
         "categoria":"frutas",
-        "img": "./image/Banana.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Banana.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":13,
         "nombre":"Brocoli",
         "categoria":"verduras",
-        "img": "./image/brocoli.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/brocoli.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":14,
         "nombre":"Choclo",
         "categoria":"verduras",
-        "img": "./image/Choclo.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Choclo.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":15,
         "nombre":"Ciruela",
         "categoria":"frutas",
-        "img": "./image/Ciruela.jfif",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Ciruela.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":16,
         "nombre":"Lechuga morada",
         "categoria":"verduras",
-        "img": "./image/lechuga-morada.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/lechuga-morada.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":17,
         "nombre":"Limon",
         "categoria":"frutas",
-        "img": "./image/limon.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/limon.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":18,
         "nombre":"Cebolla morada",
         "categoria":"verduras",
-        "img": "./image/Cebolla-morada.jfif",
+        "img": "https://raw.githubusercontent.com/Quincenero/marco-espinoza-25235/refs/heads/main/src/assets/productos/Cebolla-morada.jfif",
         "precio": 1000
     },
     {
         "id":19,
         "nombre":"Kiwi",
         "categoria":"frutas",
-        "img": "./image/Kiwi.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Kiwi.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":20,
         "nombre":"Paltas",
         "categoria":"frutas",
-        "img": "./image/palta.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/palta.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":21,
         "nombre":"Carbon vegetal",
         "categoria":"almacen",
-        "img": "./image/carbon.png",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/carbon.png?raw=true",
         "precio": 1000
     },
     {
         "id":22,
         "nombre":"Maderitas",
         "categoria":"almacen",
-        "img": "./image/maderitas.png",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/maderitas.png?raw=true",
         "precio": 1000
     },
     {
         "id":23,
         "nombre":"Mix de Pimientas",
         "categoria":"almacen",
-        "img": "./image/mix-de-pimientas.png",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/mix-de-pimientas.png?raw=true",
         "precio": 1000
     }
 ]
