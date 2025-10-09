@@ -5,9 +5,11 @@ export default function Productos() {
 
   useEffect(() => {
     const obtenerProductos = async () => {
-      const url = "https://raw.githubusercontent.com/Quincenero/25235-marco-espinoza/main/src/data/productos.json";
+      const url = "https://raw.githubusercontent.com/Quincenero/marco-espinoza-25235/main/src/data/productos.json";
+      console.log(url)
       try {
         const response = await fetch(url);
+        console.log(response)
         if (!response.ok) throw new Error("Error al obtener productos");
         const data = await response.json();
         setProductos(data);
@@ -25,10 +27,10 @@ export default function Productos() {
       {productos.map((prod) => (
         <div key={prod.id} className="col-md-4 mb-3">
           <div className="card h-100">
-            <img src={prod.imagen} alt={prod.nombre} className="card-img-top" />
+            <img src={prod.img} alt={prod.nombre} className="card-img-top" />
             <div className="card-body">
               <h5 className="card-title">{prod.nombre}</h5>
-              <p className="card-text">${prod.valor}</p>
+              <p className="card-text">${prod.precio}</p>
             </div>
           </div>
         </div>

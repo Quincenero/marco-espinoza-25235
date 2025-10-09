@@ -3,7 +3,7 @@
         "id":1,
         "nombre":"Batatas",
         "categoria":"verduras",
-        "img": "./image/batata.jpg",
+        "img":"https://raw.githubusercontent.com/Quincenero/marco-espinoza-25235/main/src/assets/productos/batata.jpg",
         "precio": 1000
     },
     {
@@ -31,14 +31,14 @@
         "id":5,
         "nombre":"Naranjas",
         "categoria":"frutas",
-        "img": "./image/Naranja-ombligo.jpg",
+        "img": "../image/Naranja-ombligo.jpg",
         "precio": 1000
     },
     {
         "id":6,
         "nombre":"Acelgas",
         "categoria":"verduras",
-        "img": "./image/Acelga.jpg",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/Acelga.jpg?raw=true",
         "precio": 1000
     },
     {
