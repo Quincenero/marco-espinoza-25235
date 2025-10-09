@@ -1,53 +1,70 @@
 import { useContext } from 'react';
-import { Container, ListGroup, Button, Image, ButtonGroup } from 'react-bootstrap';
 import { CarritoContext } from '../context/CarritoContext';
+import { Container, Table, Button } from 'react-bootstrap';
 
 const Carrito = () => {
-  const { carrito, sumarUnidad, restarUnidad, vaciarCarrito } = useContext(CarritoContext);
+  const { carrito, eliminarDelCarrito, aumentarCantidad, reducirCantidad } = useContext(CarritoContext);
 
-  const totalCompra = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+  const total = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
 
   return (
     <Container className="mt-4">
-      <h2>Tu Carrito</h2>
-      {carrito.length === 0 ? (
-        <p>No hay productos en el carrito.</p>
-      ) : (
-        <>
-          <ListGroup>
-            {carrito.map((item) => {
-              const imagenSrc = new URL(`../assets/productos/${item.img}`, import.meta.url).href;
-              const totalPorProducto = item.precio * item.cantidad;
+      <h2 className="text-success text-center mb-4">🛒 Tu carrito</h2>
 
-              return (
-                <ListGroup.Item key={item.id} className="d-flex justify-content-between align-items-center">
-                  <div className="d-flex align-items-center gap-3">
-                    <Image src={imagenSrc} alt={item.nombre} width={50} height={50} rounded />
-                    <div>
-                      <strong>{item.nombre}</strong><br />
-                      ${item.precio} × {item.cantidad} = <strong>${totalPorProducto}</strong>
-                    </div>
-                  </div>
-                  <ButtonGroup>
-                    <Button variant="outline-secondary" size="sm" onClick={() => restarUnidad(item.id)}>
+      {carrito.length === 0 ? (
+        <p className="text-center">El carrito está vacío.</p>
+      ) : (
+        <Table striped bordered hover responsive>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Producto</th>
+              <th>Precio unitario</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {carrito.map((producto) => (
+              <tr key={producto.id}>
+                <td>
+                  <img
+                    src={producto.img}
+                    alt={producto.nombre}
+                    style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                  />
+                </td>
+                <td>{producto.nombre}</td>
+                <td>${producto.precio}</td>
+                <td>
+                  <div className="d-flex align-items-center justify-content-center gap-2">
+                    <Button variant="outline-secondary" size="sm" onClick={() => reducirCantidad(producto.id)}>
                       −
                     </Button>
-                    <Button variant="outline-success" size="sm" onClick={() => sumarUnidad(item.id)}>
+                    <span>{producto.cantidad}</span>
+                    <Button variant="outline-secondary" size="sm" onClick={() => aumentarCantidad(producto.id)}>
                       +
                     </Button>
-                  </ButtonGroup>
-                </ListGroup.Item>
-              );
-            })}
-          </ListGroup>
-
-          <div className="mt-4 text-end">
-            <h4>Total de la compra: ${totalCompra}</h4>
-            <Button variant="danger" className="mt-2" onClick={vaciarCarrito}>
-              Vaciar carrito
-            </Button>
-          </div>
-        </>
+                  </div>
+                </td>
+                <td>${producto.precio * producto.cantidad}</td>
+                <td>
+                  <Button variant="danger" size="sm" onClick={() => eliminarDelCarrito(producto.id)}>
+                    Eliminar
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colSpan="4" className="text-end fw-bold">Total</td>
+              <td className="fw-bold">${total}</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </Table>
       )}
     </Container>
   );
