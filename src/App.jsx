@@ -10,7 +10,7 @@ import Contacto from './pages/Contacto';
 import Carrito from './pages/Carrito';
 import Login from './pages/Login';
 
-export default function App() {
+function App() {
   return (
   
       <BrowserRouter>
@@ -28,3 +28,4 @@ export default function App() {
     
   );
 }
+export default App;
