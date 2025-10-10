@@ -13,7 +13,7 @@ import Login from './pages/Login';
 export default function App() {
   return (
   
-      <BrowserRouter basename="/marco-espinoza-25235">
+      <BrowserRouter>
         <AppNavbar />
         <Routes>
           <Route path="/" element={<Inicio />} />
