@@ -73,7 +73,7 @@
         "id":11,
         "nombre":"Arandanos",
         "categoria":"frutas",
-        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/arandanos.png?raw=true",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/arandanos.jpg?raw=true",
         "precio": 1000
     },
     {
@@ -122,7 +122,7 @@
         "id":18,
         "nombre":"Cebolla morada",
         "categoria":"verduras",
-        "img": "https://raw.githubusercontent.com/Quincenero/marco-espinoza-25235/refs/heads/main/src/assets/productos/Cebolla-morada.jfif",
+        "img": "https://raw.githubusercontent.com/Quincenero/marco-espinoza-25235/refs/heads/main/src/assets/productos/cebolla.jpg",
         "precio": 1000
     },
     {
@@ -143,21 +143,21 @@
         "id":21,
         "nombre":"Carbon vegetal",
         "categoria":"almacen",
-        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/carbon.png?raw=true",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/carbon.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":22,
         "nombre":"Maderitas",
         "categoria":"almacen",
-        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/maderitas.png?raw=true",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/leñas.jpg?raw=true",
         "precio": 1000
     },
     {
         "id":23,
         "nombre":"Mix de Pimientas",
         "categoria":"almacen",
-        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/mix-de-pimientas.png?raw=true",
+        "img": "https://github.com/Quincenero/marco-espinoza-25235/blob/main/src/assets/productos/mix-de-pimientas.jpg?raw=true",
         "precio": 1000
     }
 ]

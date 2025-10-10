@@ -8,12 +8,12 @@ const ProductCard = ({ producto, agregarAlCarrito }) => {
     : `/img/${producto.img}`;
 
   return (
-    <Card className="mb-4 shadow-sm border-0 rounded-4 product-card" style={{ minHeight: '400px' }}>
+    <Card className="h-100 shadow-sm">
       <Card.Img
         variant="top"
         src={imagenSrc}
         alt={producto.nombre}
-        className="product-image rounded-top"
+        className="img-fluid"
         style={{ height: '200px', objectFit: 'cover' }}
       />
       <Card.Body className="d-flex flex-column">

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 export const CarritoContext = createContext();
 
@@ -13,44 +13,20 @@ export const CarritoProvider = ({ children }) => {
   }, [carrito]);
 
   const agregarAlCarrito = (producto) => {
-    setCarrito((prevCarrito) => {
-      const existente = prevCarrito.find((item) => item.id === producto.id);
-      if (existente) {
-        return prevCarrito.map((item) =>
-          item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
-        );
-      } else {
-        return [...prevCarrito, { ...producto, cantidad: 1 }];
-      }
+    setCarrito((prev) => {
+      const existente = prev.find((item) => item.id === producto.id);
+      return existente
+        ? prev.map((item) =>
+            item.id === producto.id
+              ? { ...item, cantidad: item.cantidad + 1 }
+              : item
+          )
+        : [...prev, { ...producto, cantidad: 1 }];
     });
   };
 
-  const eliminarDelCarrito = (id) => {
-    setCarrito((prevCarrito) => prevCarrito.filter((item) => item.id !== id));
-  };
-
-  const aumentarCantidad = (id) => {
-    setCarrito((prevCarrito) =>
-      prevCarrito.map((item) =>
-        item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item
-      )
-    );
-  };
-
-  const reducirCantidad = (id) => {
-    setCarrito((prevCarrito) =>
-      prevCarrito
-        .map((item) =>
-          item.id === id ? { ...item, cantidad: item.cantidad - 1 } : item
-        )
-        .filter((item) => item.cantidad > 0)
-    );
-  };
-
   return (
-    <CarritoContext.Provider
-      value={{ carrito, agregarAlCarrito, eliminarDelCarrito, aumentarCantidad, reducirCantidad }}
-    >
+    <CarritoContext.Provider value={{ carrito, agregarAlCarrito }}>
       {children}
     </CarritoContext.Provider>
   );
