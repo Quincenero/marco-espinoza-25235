@@ -3,8 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://quincenero.github.io/marco-espinoza-25235/",
   "scripts": {
-   "dev": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
