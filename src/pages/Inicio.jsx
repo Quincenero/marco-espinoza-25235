@@ -6,7 +6,7 @@ function Inicio() {
       <div className="p-4 rounded" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}>
         <h1 className="display-4">Verdulería Orgánica</h1>
         <p className="lead">Productos frescos, locales y saludables para tu mesa.</p>
-        <a href="/productos" className="btn btn-success btn-lg mt-3">Ver productos</a>
+        <a href="productos" className="btn btn-success btn-lg mt-3">Ver productos</a>
       </div>
     </div>
   );
