@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Nosotros() {
   return (
@@ -21,10 +22,10 @@ function Nosotros() {
         </div>
       </div>
       <div className="text-center mt-4">
-        <a href="contacto" className="btn btn-success">Conocenos más</a>
+        <Link to ="/contacto" className="btn btn-success">Conocenos más </Link>
       </div>
     </div>
   );
 }
 
-export default Nosotros;
+export default Nosotros; 
