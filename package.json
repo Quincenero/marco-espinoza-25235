@@ -6,10 +6,14 @@
   "homepage": "https://quincenero.github.io/marco-espinoza-25235/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs"
+    "deploy": "gh-pages -d docs",
+    "build:gh-pages": "cross-env DEPLOY_TARGET=gh-pages npm run build",
+    "build:netlify": "cross-env DEPLOY_TARGET=netlify npm run build",
+    "build": "vite build"
+
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
@@ -25,6 +29,7 @@
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",
+    "cross-env": "^10.1.0",
     "eslint": "^9.37.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
