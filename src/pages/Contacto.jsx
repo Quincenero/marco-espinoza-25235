@@ -1,65 +1,36 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { Container, Row, Col, Form, Button, Card, Alert } from 'react-bootstrap';
 
-const Contacto = () => {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
-    mensaje: ''
-  });
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Datos del formulario:', formData);
-    setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 5000);
-    
-    // Limpiar formulario
-    setFormData({
-      nombre: '',
-      email: '',
-      telefono: '',
-      mensaje: ''
-    });
-  };
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xldpoozq");
 
   return (
     <Container className="my-5">
       <Row className="justify-content-center">
         <Col md={8}>
           <h2 className="text-center mb-4">Contáctanos</h2>
-          
-          {showAlert && (
+
+          {state.succeeded && (
             <Alert variant="success">
-              ¡Gracias por tu mensaje! Te contactaremos pronto.
+              ¡Gracias por tu mensaje! Te responderemos pronto 🍎
             </Alert>
           )}
 
           <Card>
             <Card.Body>
-              <Form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit} method="POST">
                 <Row>
                   <Col md={6}>
                     <Form.Group className="mb-3">
                       <Form.Label>Nombre completo *</Form.Label>
                       <Form.Control
                         type="text"
-                        name="nombre"
-                        value={formData.nombre}
-                        onChange={handleChange}
-                        required
+                        name="name"
                         placeholder="Tu nombre"
+                        required
                       />
+                      <ValidationError prefix="Nombre" field="name" errors={state.errors} />
                     </Form.Group>
                   </Col>
                   <Col md={6}>
@@ -68,11 +39,10 @@ const Contacto = () => {
                       <Form.Control
                         type="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
                         placeholder="tu@email.com"
+                        required
                       />
+                      <ValidationError prefix="Email" field="email" errors={state.errors} />
                     </Form.Group>
                   </Col>
                 </Row>
@@ -81,11 +51,10 @@ const Contacto = () => {
                   <Form.Label>Teléfono</Form.Label>
                   <Form.Control
                     type="tel"
-                    name="telefono"
-                    value={formData.telefono}
-                    onChange={handleChange}
+                    name="phone"
                     placeholder="11 234 5678"
                   />
+                  <ValidationError prefix="Teléfono" field="phone" errors={state.errors} />
                 </Form.Group>
 
                 <Form.Group className="mb-4">
@@ -93,17 +62,16 @@ const Contacto = () => {
                   <Form.Control
                     as="textarea"
                     rows={4}
-                    name="mensaje"
-                    value={formData.mensaje}
-                    onChange={handleChange}
-                    required
+                    name="message"
                     placeholder="¿En qué podemos ayudarte?"
+                    required
                   />
+                  <ValidationError prefix="Mensaje" field="message" errors={state.errors} />
                 </Form.Group>
 
                 <div className="text-center">
-                  <Button variant="success" type="submit" size="lg">
-                    Enviar Mensaje
+                  <Button variant="success" type="submit" size="lg" disabled={state.submitting}>
+                    {state.submitting ? 'Enviando...' : 'Enviar Mensaje'}
                   </Button>
                 </div>
               </Form>
@@ -113,6 +81,6 @@ const Contacto = () => {
       </Row>
     </Container>
   );
-};
+}
 
-export default Contacto;
+export default ContactForm;

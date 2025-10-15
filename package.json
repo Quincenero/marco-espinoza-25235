@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d docs"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "bootstrap": "^5.3.8",
     "react": "^19.1.1",
     "react-bootstrap": "^2.10.10",
