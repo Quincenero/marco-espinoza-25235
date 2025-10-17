@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { CarritoContext } from '../context/CarritoContext';
 import { Container, Table, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Carrito = () => {
   const { carrito, eliminarDelCarrito, aumentarCantidad, reducirCantidad } = useContext(CarritoContext);
@@ -14,6 +15,9 @@ const Carrito = () => {
       {carrito.length === 0 ? (
         <p className="text-center">El carrito está vacío.</p>
       ) : (
+
+      <div style={{ maxHeight: '70vh', overflowY: 'auto' }}>
+
         <Table striped bordered hover responsive>
           <thead>
             <tr>
@@ -59,12 +63,13 @@ const Carrito = () => {
           </tbody>
           <tfoot>
             <tr>
-              <td colSpan="4" className="text-end fw-bold">Total</td>
+              <td colSpan="4" className="text-end fw-bold fs-5">Total</td>
               <td className="fw-bold">${total}</td>
               <td></td>
             </tr>
           </tfoot>
         </Table>
+      </div>
       )}
     </Container>
   );
