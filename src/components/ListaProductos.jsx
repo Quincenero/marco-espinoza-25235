@@ -12,7 +12,7 @@ const ListaProductos = () => {
   const [productoAgregado, setProductoAgregado] = useState(null);
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/Quincenero/marco-espinoza-25235/main/src/data/productos.json')
+    fetch('/data/productos.json')
       .then((res) => {
         if (!res.ok) throw new Error("No se pudo cargar el archivo");
         return res.json();

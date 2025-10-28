@@ -18,7 +18,7 @@ function Nosotros() {
           </p>
         </div>
         <div className="col-md-6 d-flex align-items-center justify-content-center">
-          <img src="/src/assets/productos/nosotros.png" alt="Equipo de la verdulería" className="img-fluid rounded shadow" />
+          <img src="images/nosotros.png" alt="Equipo de la verdulería" className="img-fluid rounded shadow" />
         </div>
       </div>
       <div className="text-center mt-4">

@@ -5,7 +5,7 @@ const ProductCard = ({ producto, agregarAlCarrito }) => {
   
   const imagenSrc = producto.img.startsWith('http')
     ? producto.img
-    : `/img/${producto.img}`;
+    : `/images/${producto.img}`;
 
   return (
     <Card className="h-100 shadow-sm">

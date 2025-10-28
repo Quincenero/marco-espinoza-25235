@@ -46,14 +46,24 @@ const eliminarDelCarrito = (id) => {
   setCarrito((prev) => prev.filter((item) => item.id !== id));
 };
 
+const calcularTotal = () => {
+  return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+};
 
+const vaciarCarrito = () => setCarrito([]);
   return (
-    <CarritoContext.Provider value={{ carrito, 
-                                      agregarAlCarrito
-                                      , aumentarCantidad
-                                      , reducirCantidad
-                                      , eliminarDelCarrito
-                                    }}>
+    <CarritoContext.Provider
+        value={{
+          carrito,
+          agregarAlCarrito,
+          aumentarCantidad,
+          reducirCantidad,
+          eliminarDelCarrito,
+          vaciarCarrito,
+          calcularTotal
+          
+        }}
+    >
       {children}
     </CarritoContext.Provider>
   );

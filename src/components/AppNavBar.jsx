@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css'
-import logo from '../assets/logo.png';
+import logo from '/images/logo.png';
 
 const AppNavbar = () => (
   <Navbar bg="success" variant="dark" expand="lg">
